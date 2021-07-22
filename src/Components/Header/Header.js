@@ -2,6 +2,7 @@ import './Header.scss';
 import ham from "../../img/ham.svg";
 import exit from "../../img/exit.svg";
 import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -20,19 +21,19 @@ class Header extends Component {
         return (
             <div className="navbar">
                 <div className="container">
-                    <a href="#" className="logo">ReflexU<span>School</span></a>
-
+                    <NavLink to="/" className="logo">ReflexU<span>School</span></NavLink>
+                    
                     <img id="mobile-cta" className="mobile-menu" src={ham} alt="Open Navigation" onClick={this.handleClick} />
 
                     <nav className={menuActive}>
                         <img id="mobile-exit" className="mobile-menu-exit" src={exit} alt="Exit" onClick={this.handleClick} />
                         <ul className="primary-nav">
-                            <li className="current"><a href="#">Home</a></li>
-                            <li><a href="#">Tutorials</a></li>
+                            <li><NavLink exact to="/" className="r-item" activeClassName="current">Home</NavLink></li>
+                            <li><NavLink exact to="/tutorials" className="r-item" activeClassName="current">Tutorials</NavLink></li>
                         </ul>
                         <ul className="secondary-nav">
-                            <li><a href="#">Forum</a></li>
-                            <li className="go-premium-cta"><a href="#">En</a></li>
+                            <li><NavLink to="/" className="r-item">Forum</NavLink></li>
+                            <li className="go-premium-cta"><NavLink to="/" className="r-item">En</NavLink></li>
                         </ul>
                     </nav>
 

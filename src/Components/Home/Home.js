@@ -1,7 +1,6 @@
 import watch from "../../img/watch.svg";
 import illustration from "../../img/coding.svg";
 import dots from "../../img/dots.svg";
-/* import person from "../../img/person.jpg"; */
 import './Home.scss';
 /* import { db } from "../../firebases.js";
 import { useState } from "react"; */
@@ -34,7 +33,7 @@ function Home() {
             <section className="hero">
                 <div className="container">
                     <div><div className="left-col">
-                        <p className="subhead">It's ReflexU &amp; School</p>
+                        <p className="subhead">It's ReflexU School</p>
                     </div>
                         <h1>Classrooms for Geeks</h1>
 
